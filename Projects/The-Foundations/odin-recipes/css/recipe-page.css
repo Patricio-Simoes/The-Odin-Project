@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+:root {
+    --main-bg: #F0F0F0;
+    --main-header: #213555;
+    --section-header: #FF9B50;
+    --recipe-bg: #213555;
+    --link: #213555;
+    --link-hover: #FF9B50;
+    --main-text: #F0F0F0;
+}
+
+main div:first-child {
+    background-color: var(--recipe-bg);
+    border-radius: 8px;
+    margin-top: 150px;
+    padding: 0 1rem 2rem 1rem;
+}
+
+body {
+    background-color: var(--main-bg);
+}
+
+#page-header {
+    text-align: center;
+    font-family: 'Indie Flower', cursive;
+    font-weight: bold;
+    font-size: 3.5rem;
+    color: var(--main-header);
+}
+
+#recipe-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+#recipe-image img {
+    margin-top: -100px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+#description h2,
+#ingredients h3,
+#steps h3,
+#steps h4 {
+    color: var(--section-header);
+    font-family: 'Indie Flower', cursive;
+    font-weight: bold;
+    text-align: center;
+}
+
+#description h2 {
+    font-size: 2rem;
+}
+
+#description p {
+    color: var(--main-text);
+    font-size: 1.2rem;
+    text-align: justify;
+}
+
+#ingredients h3,
+#steps h3 {
+    font-size: 1.5rem;
+}
+
+#ingredients ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+#ingredients ul li {
+    margin: 0.5rem 0;
+    color: var(--main-text);
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+#steps h4 {
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+
+#steps ol {
+    list-style: none;
+    padding: 0;
+}
+
+#steps p {
+    color: var(--main-text);
+    font-size: 1rem;
+    text-align: justify;
+}
+
+footer {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--link);
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+footer a:hover {
+    cursor: pointer;
+    color: var(--link-hover);
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+    #page-header {
+        font-size: 4.5rem;
+    }
+
+    #recipe-image img {
+        margin-top: -150px;
+        width: 300px;
+        height: 300px;
+    }
+
+    main div:first-child {
+        margin-top: 200px;
+        padding: 0 2rem 2rem 2rem;
+        width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #description h2 {
+        font-size: 3.5rem;
+    }
+
+    #description p {
+        font-size: 1.8rem;
+    }
+
+    #ingredients h3,
+    #steps h3 {
+        font-size: 3rem;
+    }
+
+    #ingredients ul li {
+        font-size: 1.7rem;
+    }
+
+    #steps h4 {
+        font-size: 2.25rem;
+    }
+
+    #steps p {
+        font-size: 1.6rem;
+    }
+
+    footer a {
+        font-size: 2rem;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    main div:first-child {
+        width: 750px;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    #page-header {
+        font-size: 4rem;
+    }
+
+    #recipe-image img {
+        margin-top: -150px;
+        width: 300px;
+        height: 300px;
+    }
+
+    main div:first-child {
+        width: 850px;
+        margin-top: 175px;
+    }
+
+    #description h2 {
+        font-size: 3rem;
+    }
+
+    #description p {
+        font-size: 1.5rem;
+    }
+
+    #ingredients h3,
+    #steps h3 {
+        font-size: 2.5rem;
+    }
+
+    #ingredients ul li {
+        font-size: 1.5rem;
+    }
+
+    #steps h4 {
+        font-size: 2rem;
+    }
+
+    #steps p {
+        font-size: 1.5rem;
+    }
+}

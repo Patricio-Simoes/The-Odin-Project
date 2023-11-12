@@ -1,0 +1,660 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+:root{
+    --bg-main: #272932;
+    --bg-class: #DAD2D8;
+    --title-main: #B6C2D9;
+    --title-secondary: #A8201A;
+    --text-main: #778DA9;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Dancing Script', cursive;
+    box-sizing: border-box;
+}
+
+@keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+  
+  .bounce {
+    animation: bounce 5s infinite;
+  }
+
+body{
+    background-color: var(--bg-main);
+    height: 100vh;
+}
+
+main,
+footer{
+  display: none;
+  visibility: hidden;
+}
+
+header{
+    width: 100%;
+    padding: 3em 0 2em 0;
+    color: var(--title-main);
+    position: relative;
+    top: -1em;
+    text-align: center;
+}
+
+header h1{
+    font-weight: bolder;
+    font-size: 3em;
+    letter-spacing: 0.05em;
+    word-spacing: 0.25em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header h1 img{
+  height: 100px;
+  margin-right: 0.5em;
+}
+
+header span{
+    color: var(--title-secondary);
+}
+
+main h2{
+  text-align: center;
+  font-size: 3.5em;
+  color: var(--title-main);
+  margin-bottom: 1em;
+}
+
+#game-start-btn{
+  margin-top: 1em;
+  padding: 0.5em 1em;
+  font-size: 1.5em;
+  border-radius: 5px;
+  border: 2px solid var(--title-secondary);
+  color: var(--title-secondary);
+  background-color: var(--text-main);
+}
+
+#game-start-btn:hover{
+  cursor: pointer;
+  border: 2px solid var(--text-main);
+  background-color: var(--title-secondary);
+  color: var(--text-main);
+}
+
+main,
+footer{
+  visibility: hidden;
+}
+
+#classes-list,
+#classes-description{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.viking-class{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 5em;
+  width: 300px;
+  height: 400px;
+}
+
+.viking-class div:first-child{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-class);
+  border-radius: 50%;
+  overflow: hidden;
+  padding: 3em;
+  width: 300px;
+  height: 250px;
+  flex-shrink: 0;
+}
+
+.viking-class div:first-child:hover{
+  border: 5px solid var(--title-secondary);
+}
+
+.viking-class img{
+  width: 135%;
+  height: 135%;
+  object-fit: cover;
+  transition: all 1s ease-in-out;
+}
+
+.viking-class img:hover{
+  transform: scale(110%);
+  cursor: pointer;
+}
+
+.viking-class-title{
+  text-align: center;
+  margin: 0.5em 0;
+  font-size: 2em;
+  font-weight: bold;
+  color: var(--title-secondary);
+}
+
+.viking-class-stats{
+  font-size: 1.3em;
+  text-align: justify;
+  color: var(--text-main);
+}
+
+#game-stats{
+  width: 80%;
+  max-width: 1300px;
+  margin: 5em auto 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 3px solid var(--bg-class);
+  border-radius: 16px;
+}
+
+#player-card,
+#opponent-card{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#player-card img,
+#opponent-card img{
+  width: 125px;
+  height: auto;
+  margin: 1em;
+}
+
+#player-info,
+#opponent-info{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  height: 150px;
+}
+
+#player-info h4,
+#opponent-info h4{
+  font-weight: bold;
+  font-size: 1.5em;
+  color: var(--title-secondary);
+}
+
+#player-info p,
+#opponent-info p{
+  font-weight: 500;
+  font-size: 1.2em;
+  color: var(--title-main);
+}
+
+#round-stats{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#round-stats h4{
+  font-size: 2em;
+  margin: 0.5em 0;
+  color: var(--title-main);
+}
+
+#round-stats p{
+  font-size: 1.2em;
+  margin-bottom: 0.2em;
+  color: var(--title-main);
+}
+
+#round-stats-cards,
+.round-stats-card{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.round-stats-card{
+  flex-direction: column;
+  margin: 0 1em 1em 1em;
+}
+
+#round-stats img{
+  width: 4em;
+  height: 4em;
+}
+
+footer{
+  padding: 0 0 1em 0;
+  text-align: center;
+  color: var(--bg-class);
+  background-color: var();
+  font-weight: 100;
+}
+
+footer p:first-child{
+  font-size: 1.4em;
+  font-weight: 300;
+}
+
+footer a{
+  text-decoration: none;
+  color: var(--title-secondary);
+}
+
+#project-hub:hover{
+  color: #6d4f84;
+}
+
+#game-over-popup{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  visibility: hidden;
+}
+
+#game-over-popup h2{
+  font-size: 5em;
+  font-weight: 700;
+  padding: 1em 0;
+}
+
+#game-over-popup button{
+  padding: 0.25em 0.5em;
+  font-size: 4em;
+  border-radius: 8px;
+  color: #000;
+  background-color: var(--text-main);
+  border: 5px solid var(--title-secondary);
+}
+
+#game-over-popup button:hover{
+  cursor: pointer;
+  color: var(--title-secondary);
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 1200px) {
+  header{
+    padding: 3em 0 1em 0;
+  }
+
+  main h2{
+    font-size: 3em;
+  }
+  
+  .viking-class{
+    margin: 0 2.5em;
+    width: 250px;
+    height: 400px;
+  }
+
+  .viking-class div:first-child{
+    width: 225px;
+    height: 225px;
+  }
+
+  .viking-class-title{
+    margin: 0.45em 0;
+    font-size: 2.2em;
+  }
+  
+  .viking-class-stats{
+    font-size: 1.5em;
+  }
+
+  #game-stats{
+    width: 95%;
+    margin: 4em auto 0 auto;
+  }
+
+  #player-card img,
+  #opponent-card img{
+    width: 100px;
+  }
+
+  #player-info,
+  #opponent-info{
+    height: 100px;
+  }
+
+  #round-stats h4{
+    font-size: 2em;
+    margin: 0.5em 0;
+    color: var(--title-main);
+  }
+
+  #round-stats p{
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+  }
+
+  footer p:first-child{
+    font-size: 1.6em;
+  }
+  #game-over-popup h2{
+    font-size: 4em;
+  }
+  
+  #game-over-popup button{
+    padding: 0.25em 0.5em;
+    font-size: 2.5em;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 992px) {
+
+  header{
+    padding: 3em 0 0 0;
+  }
+
+  header h1{
+    font-size: 3.5em;
+    word-spacing: 0.20em;
+    flex-direction: column;
+  }
+
+  header h1 img{
+    height: 150px;
+    margin-right: 0.4em;
+  }
+
+  main h2{
+    font-size: 2.5em;
+  }
+
+  .viking-class{
+    margin: 0 0.2em;
+  }
+  .viking-class img{
+    width: 200%;
+    height: 100%;
+  }
+
+  .viking-class div:first-child{
+    padding: 1.5em;
+    width: 180px;
+    height: 180px;
+  }
+  
+  .viking-class-stats{
+    font-size: 1.5em;
+    padding: 0 0.5em;
+  }
+
+  #game-stats{
+    width: 95%;
+    margin: 3em auto 0 auto;
+  }
+
+  #player-card img,
+  #opponent-card img{
+    width: 75px;
+  }
+
+  #player-info,
+  #opponent-info{
+    height: 100px;
+  }
+
+  #player-info h4,
+  #opponent-info h4{
+    font-size: 1.2em;
+  }
+
+  #player-info p,
+  #opponent-info p{
+    font-size: 1em;
+  }
+
+  #round-stats h4{
+    font-size: 1.5em;
+    margin: 1em 0;
+  }
+
+  #round-stats p{
+    font-size: 1em;
+  }
+
+  #round-stats img{
+    width: 3em;
+    height: 3em;
+  }
+
+  footer p:first-child{
+    font-size: 1.5em;
+  }
+
+  #game-over-popup h2{
+    font-size: 4em;
+  }
+  
+  #game-over-popup button{
+    padding: 0.25em 0.5em;
+    font-size: 2.5em;
+  }
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 768px) {
+
+  header h1{
+    font-size: 3em;
+    word-spacing: 0.15em;
+    flex-direction: column;
+  }
+
+  header h1 img{
+    height: 150px;
+  }
+
+  main h2{
+    font-size: 2em;
+  }
+
+  .viking-class{
+    margin: 0;
+  }
+
+  .viking-class img{
+    width: 200%;
+    height: 100%;
+  }
+
+  .viking-class div:first-child{
+    padding: 1em;
+    width: 150px;
+    height: 150px;
+  }
+  
+  .viking-class-title{
+    margin: 1em 0 0.5em 0;
+    font-size: 2em;
+  }
+
+  .viking-class-stats{
+    font-size: 1.15em;
+  }
+
+  #game-stats{
+    width: 60%;
+    flex-direction: column;
+  }
+  
+  #player-card,
+  #opponent-card{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  #player-card img{
+    width: 100px;
+    margin: 1em 3.5em 1em 0em;
+  }
+  
+  #opponent-card img{
+    width: 100px;
+    margin: 1em 0em 1em 3.5em;
+  }
+
+  #player-info h4,
+  #opponent-info h4{
+    font-size: 1.8em;
+  }
+  
+  #player-info p,
+  #opponent-info p{
+    font-size: 1.3em;
+  }
+  
+  #round-stats h4{
+    font-size: 1.8em;
+    margin: 0.5em 0;
+  }
+  
+  #round-stats p{
+    font-size: 1.2em;
+    margin-bottom: 0.2em;
+    color: var(--title-main);
+  }
+  
+  #round-stats img{
+    width: 3em;
+    height: 3em;
+  }
+
+  #game-over-popup h2{
+    font-size: 4em;
+  }
+  
+  #game-over-popup button{
+    padding: 0.25em 0.5em;
+    font-size: 2.5em;
+  }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  header h1{
+    flex-direction: column;
+    font-size: 2em;
+  }
+
+  header h1 img{
+    height: 100px;
+  }
+
+  main h2{
+    font-size: 2.5em;
+  }
+
+  #classes-list{
+    flex-wrap: wrap;
+  }
+
+  .viking-class{
+    flex-direction: row;
+    width: 350px;
+    height: 200px;
+  }
+
+  .viking-class div:first-child{
+    width: 125px;
+    height: 125px;
+    margin-right: 1em;
+  }
+  
+  .viking-class-title{
+    margin: 0 0 0.5em 0;
+    font-size: 2.2em;
+  }
+
+  .viking-class-stats{
+    font-size: 1.15em;
+  }
+
+  #game-stats{
+    width: 90%;
+    flex-direction: column;
+  }
+  
+  #player-card,
+  #opponent-card{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  #player-card img{
+    width: 100px;
+    margin: 1em 3.5em 1em 0em;
+  }
+  
+  #opponent-card img{
+    width: 100px;
+    margin: 1em 0em 1em 3.5em;
+  }
+
+  #player-info h4,
+  #opponent-info h4{
+    font-size: 1.8em;
+  }
+  
+  #player-info p,
+  #opponent-info p{
+    font-size: 1.3em;
+  }
+  
+  #round-stats h4{
+    font-size: 1.8em;
+    margin: 0.5em 0;
+  }
+  
+  #round-stats p{
+    font-size: 1.2em;
+    margin-bottom: 0.2em;
+    color: var(--title-main);
+  }
+  
+  #round-stats img{
+    width: 3em;
+    height: 3em;
+  }
+
+  #game-over-popup h2{
+    font-size: 3em;
+  }
+  
+  #game-over-popup button{
+    padding: 0.25em 0.5em;
+  }
+}
+
+
+
+
+
