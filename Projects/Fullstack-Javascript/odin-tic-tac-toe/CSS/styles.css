@@ -271,6 +271,7 @@ main {
 #return:hover{
     color: var(--color-4);
 }
+
 /* Extra large devices (large laptops and desktops, 1200px and down) */
 @media only screen and (max-width: 1200px) {
     
@@ -480,7 +481,7 @@ main {
     }
 }
 
-@media only screen and (max-width: 350px) {
+@media only screen and (max-width: 375px) {
 
     #gameboard {
         width: 250px;
