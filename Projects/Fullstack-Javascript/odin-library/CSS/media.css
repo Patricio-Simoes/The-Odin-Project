@@ -1,0 +1,296 @@
+/* Extra large devices (large laptops and desktops, 1200px and down) */
+@media only screen and (max-width: 1200px) {
+    #books {
+        grid-template-columns: repeat(auto-fill, minmax(315px, 0.35fr));
+        gap: 30px;
+    }
+
+    .book,
+    .new-book {
+        height: 460px;
+    }
+
+    .book {
+        background-color: var(--color-3);
+        grid-template-rows: 50px 400px;
+    }
+
+    .book-title {
+        font-size: 2.2em;
+    }
+
+    .book-cover {
+        height: 280px;
+    }
+
+    .book-status {
+        font-size: 1.3em;
+    }
+
+    .new-book {
+        height: 455px;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and down) */
+@media only screen and (max-width: 992px) {
+    #books {
+        grid-template-columns: repeat(auto-fill, minmax(275px, 0.3fr));
+        gap: 25px;
+    }
+
+    .book,
+    .new-book {
+        height: 400px;
+    }
+
+    .book {
+        background-color: var(--color-3);
+        grid-template-rows: 50px 340px;
+    }
+
+    .book-title {
+        font-size: 2em;
+    }
+
+    .book-cover {
+        height: 250px;
+    }
+
+    .book-status {
+        font-size: 1.2em;
+    }
+
+    .new-book {
+        height: 395px;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and down) */
+@media only screen and (max-width: 768px) {
+
+    #books {
+        grid-template-columns: repeat(auto-fill, minmax(275px, 0.6fr));
+        gap: 25px;
+    }
+
+    header {
+        height: 12vh;
+    }
+
+    header div+div h1 {
+        font-size: 1.5em;
+        margin-left: 0.35em;
+    }
+
+    header div+div+div h2 {
+        font-size: 1.2em;
+        margin-right: 0.35em;
+    }
+
+    main {
+        height: 79vh;
+    }
+
+    #large-footer {
+        height: 9vh;
+    }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    /* Hamburger menu comes into play */
+
+    .hamburger-menu{
+        display: block;
+        visibility: visible;
+    }
+
+    #menu-toggle {
+        opacity: 0;
+    }
+
+    #menu-toggle:checked+.menu__btn>span {
+        transform: rotate(45deg);
+    }
+
+    #menu-toggle:checked+.menu__btn>span::before {
+        top: 0;
+        transform: rotate(0deg);
+    }
+
+    #menu-toggle:checked+.menu__btn>span::after {
+        top: 0;
+        transform: rotate(90deg);
+    }
+
+    #menu-toggle:checked+.menu__btn>span,
+    #menu-toggle:checked+.menu__btn>span::before,
+    #menu-toggle:checked+.menu__btn>span::after {
+        box-shadow: none;
+    }
+
+    #menu-toggle:checked~.menu-box {
+        left: 0 !important;
+    }
+
+    .menu__btn {
+        position: fixed;
+        top: 5%;
+        left: 1.5em;
+        width: 2em;
+        height: 2em;
+        cursor: pointer;
+        z-index: 999;
+    }
+
+    .menu__btn>span,
+    .menu__btn>span::before,
+    .menu__btn>span::after {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        background-color: var(--color-3);
+        transition-duration: .25s;
+    }
+
+    .menu__btn>span::before {
+        content: '';
+        top: -8px;
+    }
+
+    .menu__btn>span::after {
+        content: '';
+        top: 8px;
+    }
+
+    .menu-box {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: fixed;
+        padding-top: 80px;
+        top: 0;
+        left: -200%;
+        width: 75%;
+        max-width: 350px;
+        height: 100%;
+        margin: 0;
+        list-style: none;
+        background-color: rgba(26, 26, 24, 0.95);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        transition-duration: 0.5s;
+        z-index: 998;
+        overflow-y: scroll;
+    }
+
+
+    .menu-item button {
+        width: 100%;
+        text-align: center;
+        border: none;
+        background-color: transparent;
+        font-size: 1.8em;
+        font-weight: 600;
+        color: var(--color-3);
+    }
+
+    .menu-item button:hover {
+        cursor: pointer;
+    }
+
+    .menu-item button i{
+        margin-right: 1em;
+    }
+
+    .new-book{
+        display: none;
+        visibility: hidden;
+    }
+
+    header {
+        text-align: center;
+        justify-content: center;
+    }
+
+    header div+div+div{
+        display: none;
+        visibility: hidden;
+    }
+
+    #large-footer {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    #large-footer div {
+        flex-direction: row;
+        font-size: 0.8em;
+        align-items: center;
+    }
+
+    #credits {
+        display: none  !important;
+        visibility: hidden !important;
+    }
+
+    #new-book-details {
+        width: 80%;
+    }
+
+    #modal form div {
+        flex-direction: column;
+        padding: 0.5em;
+    }
+
+    #modal form div div{
+        flex-direction: row;
+        align-items: center;
+    }
+
+    #modal form div div label{
+        margin: 0 auto;
+    }
+    
+    #modal form label {
+        margin-bottom: 0.5em;
+    }
+
+    #modal form input[type=text],
+    #modal form input[type=number],
+    #modal form input[type=file] {
+        line-height: 2.2em;
+        width: 100%;
+        max-width: 250px;
+    }
+
+
+    #close-modal {
+        height: 20px;
+        width: 20px;
+    }
+
+    #submit {
+        width: 200px;
+        font-size: 1em;
+        margin-top: 0;
+    }
+
+    #hamburger-credits {
+        color: #FFF;
+        justify-content: space-evenly;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+    #hamburger-credits a {
+        color: var(--link);
+    }
+    
+    #hamburger-credits a:hover {
+        color: var(--color-3);
+    }
+}

@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Open+Sans&display=swap');
+
+:root {
+    --color-1: #1a1a18;
+    --color-2: #3b3b3b;
+    --color-3: #eae7d2;
+    --text: #FFF;
+    --link: #f1ca77;
+}
+
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+}
+
+.hamburger-menu {
+    display: none;
+    visibility: hidden;
+}
+
+header {
+    box-sizing: border-box;
+    padding: 0.5em 1em;
+    height: 15vh;
+    background-color: var(--color-1);
+    display: flex;
+    justify-content: space-between;
+}
+
+header img {
+    height: 100%;
+}
+
+header div+div,
+header div+div+div {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+header div+div h1,
+header div+div h2 {
+    color: var(--text);
+}
+
+header div+div h1 {
+    font-weight: 700;
+    font-size: 2em;
+    margin-left: 0.5em;
+}
+
+header div+div h2 {
+    font-weight: 600;
+    font-size: 1.5em;
+    margin-right: 0.5em;
+}
+
+header div+div+div img {
+    height: 80%;
+    border-radius: 50%;
+    box-shadow: 0 0 5px var(--color-3);
+}
+
+main {
+    box-sizing: border-box;
+    padding: 2em;
+    height: 75vh;
+    background-color: var(--color-2);
+    overflow: auto;
+}
+
+#books {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fill, minmax(325px, 1fr));
+    gap: 35px;
+}
+
+.book,
+.new-book {
+    border-radius: 12px;
+    font-family: 'Caveat', cursive;
+}
+
+.book,
+.new-book {
+    height: 510px;
+}
+
+.book {
+    background-color: var(--color-3);
+    display: grid;
+    grid-template-rows: 50px 450px;
+    align-items: center;
+}
+
+.new-book {
+    border: 1px dashed var(--color-3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.book button img,
+.new-book button img,
+#close-modal img {
+    height: 100%;
+    width: 100%;
+}
+
+.remove {
+    justify-self: end;
+    margin-right: 1em;
+}
+
+
+.book button,
+.new-book button,
+#close-modal {
+    padding: 0;
+    outline: none;
+    border: none;
+    background-color: transparent;
+}
+
+.remove,
+.new-book button {
+    border-radius: 50%;
+}
+
+.remove {
+    height: 35px;
+    width: 35px;
+}
+
+.new-book button {
+    height: 100px;
+    width: 100px;
+}
+
+.book-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.book-title {
+    font-size: 2.5em;
+    font-weight: 700;
+}
+
+.book-cover {
+    height: 300px;
+    max-width: 70%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.book-status {
+    display: inline-block;
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+.book-pages {
+    font-weight: 500;
+    font-size: 1.3em;
+}
+
+#large-footer {
+    box-sizing: border-box;
+    height: 10vh;
+    background-color: var(--color-1);
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    padding: 1em 2em;
+}
+
+#large-footer div {
+    height: 100%;
+    color: var(--text);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#large-footer #credits {
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+#credits a {
+    color: var(--link);
+}
+
+#credits a:hover {
+    color: var(--color-3);
+}
+
+#modal {
+    visibility: hidden;
+    display: none;
+    z-index: 1000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    align-items: center;
+    justify-content: center;
+}
+
+#new-book-details {
+    width: 500px;
+    background-color: var(--color-2);
+    border-radius: 16px;
+    box-shadow: 0 0 5px var(--color-3);
+}
+
+#modal form {
+    display: flex;
+    flex-direction: column;
+}
+
+#modal form div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em;
+}
+
+#modal form label {
+    font-size: 1.5em;
+    color: var(--text);
+    font-weight: 700;
+}
+
+#modal form input[type=text],
+#modal form input[type=number],
+#modal form input[type=file] {
+    box-sizing: border-box;
+    line-height: 2em;
+    border: none;
+    background-color: var(--color-3);
+    outline: none;
+    width: 50%;
+    padding: 0 0.5em;
+}
+
+#modal form input[type=radio] {
+    margin-left: 1em;
+}
+
+#modal form input[type=file]:hover,
+#modal form input[type=radio]:hover {
+    cursor: pointer;
+}
+
+#close-modal {
+    height: 25px;
+    width: 25px;
+    margin: 1em 1em 1em auto;
+}
+
+#submit {
+    width: 250px;
+    background-color: var(--color-3);
+    padding: 1em 0;
+    border-radius: 8px;
+    margin: 1em auto;
+    font-size: 1.2em;
+    font-weight: 700;
+    box-shadow: 0 0 5px #000;
+}
+
+#large-footer div:first-child p {
+    font-weight: 700;
+}
+
+#large-footer div:first-child p span {
+    font-weight: 400;
+}
