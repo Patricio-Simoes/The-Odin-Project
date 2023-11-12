@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patrício Simões | TOP</title>
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./CSS/reset.css">
+    <link rel="stylesheet" href="./CSS/styles.css">
+    <script src="./JS/script.js" defer></script>
+</head>
+
+<body>
+    <main>
+        <div>
+            <section id="main-grid">
+                <article id="intro">
+                    <img src="./assets/images/myself.jpg" alt="Myself">
+                    <div>
+                        <h1>Who am i?</h1>
+                        <p>Hi, i'm Patrício.<br>I'm passionate about Web Development & Networks and this is my portfolio
+                            for the projects
+                            made while taking <a href="https://www.theodinproject.com/" target="_blank">The Odin
+                                Project</a> curriculum :)</p>
+                    </div>
+                </article>
+                <article id="path">
+                    <h2>My Path:</h2>
+                    <div>
+                        <ul>
+                            <li>
+                                <img src="./assets/images/foundations-badge.svg" alt="The Foundations">
+                            </li>
+                            <li>
+                                <img src="./assets/images/down-arrow.png" style="padding: 1rem 0;">
+                            </li>
+                            <li>
+                                <img src="./assets/images/fullstack-javascript-badge.svg" alt="Fullstack Javascript">
+                            </li>
+                        </ul>
+                    </div>
+                </article>
+                <article id="github">
+                    <a href="https://github.com/Patricio-Simoes" target="_blank"><i class="bi bi-github"></i></a>
+                </article>
+                <article id="tools">
+                    <h2>Tools used:</h2>
+                    <ul>
+                        <li><img src="./assets/images/canva.png" alt="Canva"></li>
+                        <li><img src="./assets/images/figma.png" alt="Figma"></li>
+                        <li><img src="./assets/images/gimp.png" alt="Gimp"></li>
+                        <li><img src="./assets/images/git.png" alt="Git"></li>
+                        <li><img src="./assets/images/linux.png" alt="Linux"></li>
+                        <li><img src="./assets/images/vscode.png" alt="Visual Studio Code"></li>
+                    </ul>
+                </article>
+                <article id="stack">
+                    <h2>Languages used:</h2>
+                    <div>
+                        <ul>
+                            <li><img src="./assets/images/html.png" alt="HTML5"></li>
+                            <li><img src="./assets/images/css.png" alt="CSS"></li>
+                            <li><img src="./assets/images/js.png" alt="Javascript"></li>
+                        </ul>
+                    </div>
+                </article>
+            </section>
+        </div>
+        <section id="projects">
+            <h3>My Projects</h3>
+            <div id="projects-controls">
+                <button id="foundations" class="projects-btn-active" onclick="toggleProjects()">The Foundations</button>
+                <button id="fullstack-js" onclick="toggleProjects()">Fullstack Javascript</button>
+            </div>
+            <div id="foundations-projects">
+                <article class="project">
+                    <img src="/Projects/odin-recipes/preview.png" alt="Odin's Recipes Preview">
+                    <div class="project-description">
+                        <h4>Odin's Recipes</h4>
+                        <div>
+                            <p>The very first project i made for The Odin Project.</p>
+                            <p>It's a simple HTML & CSS project created for playing around with images and flexbox.</p>
+                        </div>
+                        <aside>
+                            <a href="https://patricio-simoes.github.io/The-Odin-Project/Projects/odin-recipes/home.html"><i class="bi bi-eye-fill"></i></a>
+                            <a href="https://github.com/Patricio-Simoes/The-Odin-Project/tree/main/Projects/odin-recipes"><i class="bi bi-code-slash"></i></a>
+                        </aside>
+                    </div>
+                </article>
+            </div>
+
+            <div id="fullstack-projects">
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
