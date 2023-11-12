@@ -268,9 +268,12 @@ main {
     margin-top: 2rem;
 }
 
+#return:hover{
+    color: var(--color-4);
+}
 /* Extra large devices (large laptops and desktops, 1200px and down) */
 @media only screen and (max-width: 1200px) {
-
+    
     #details-area img {
         width: 225px;
         height: 225px;
@@ -327,10 +330,7 @@ main {
     #turn-area {
         font-size: 3em;
     }
-}
 
-/* Large devices (laptops/desktops, 992px and down) */
-@media only screen and (max-width: 992px) {
     main {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
@@ -450,7 +450,41 @@ main {
         width: 100%;
     }
 
+    #gameboard {
+        width: 350px;
+        height: 350px;
+    }
+
     #mobile-title {
         font-size: 1.2em;
+    }
+
+    #turn-area {
+        font-size: 2.5em;
+    }
+
+    #game-rounds h3 {
+        font-size: 3em;
+    }
+
+    .score h4 {
+        font-size: 1.5em;
+    }
+    
+    .score p {
+        font-size: 1.2em;
+    }
+
+    #winner-area {
+        font-size: 2.5em;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+
+    #gameboard {
+        width: 250px;
+        height: 250px;
+        gap: 5px;
     }
 } 
