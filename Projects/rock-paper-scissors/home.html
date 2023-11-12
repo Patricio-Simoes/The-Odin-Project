@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock, Paper, Scissors - Viking Edition</title>
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./JS/document.js" defer></script>
+    <script src="./JS/script.js" defer></script>
+    <script src="./JS/app.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div id="new-game-area">
+            <h1 class="bounce">
+                <img src="./images/helmet.png">
+                Rock, Paper, Scissors&nbsp;<span class="edition">Viking Edition</span>
+            </h1>
+            <button id="game-start-btn">Start New Game</button>
+        </div>
+        <div id="game-over-popup">
+            <h2 id="game-over-message"></h2>
+            <button id="play-again-btn">Play Again</button>
+        </div>
+    </header>
+    <main id="main">
+        <audio id="game-start-sound" src="./sound/game-start.mp3"></audio>
+        <audio id="win-sound" src="./sound/win-effect.mp3"></audio>
+        <audio id="lose-sound" src="./sound/lose-effect.mp3"></audio>
+        <audio id="draw-sound" src="./sound/draw-effect.mp3"></audio>
+        <h2>Pick your class:</h2>
+        <ul id="classes-list">
+            <li class="viking-class">
+                <div>
+                    <img id="ranger-viking" src="./images/bow.png" alt="Ranger Viking" data-class="ranger">
+                </div>
+                <div class="viking-class-description">
+                    <h3 class="viking-class-title">The Ranger</h3>
+                    <p class="viking-class-stats">With his mighty bow, The Ranger is able to beat The Warrior, but falls
+                        to The Assassin...</p>
+                </div>
+            </li>
+            <li class="viking-class">
+                <div>
+                    <img id="warrior-viking" src="./images/axe.png" alt="Warrior Viking" data-class="warrior">
+                </div>
+                <div class="viking-class-description">
+                    <h3 class="viking-class-title">The Warrior</h3>
+                    <p class="viking-class-stats">With his crushing axe, The Warrior is able to beat The Assassin, but
+                        falls to The Ranger...</p>
+                </div>
+            </li>
+            <li class="viking-class">
+                <div>
+                    <img id="assassin-viking" src="./images/dagger.png" alt="Assassin Viking" data-class="assassin">
+                </div>
+                <div class="viking-class-description">
+                    <h3 class="viking-class-title">The Assassin</h3>
+                    <p class="viking-class-stats">With his sneaky dagger, The Assassin is able to beat The Ranger, but
+                        falls to The Warrior...</p>
+                </div>
+            </li>
+        </ul>
+        <div id="game-stats">
+            <div id="player-stats">
+                <div id="player-card">
+                    <div>
+                        <img src="./images/viking.png" alt="Player">
+                    </div>
+                    <div id="player-info">
+                        <div>
+                            <h4>Player</h4>
+                        </div>
+                        <div>
+                            <p id="player-rounds-won">Rounds Won: 0</p>
+                            <p id="player-rounds-lost">Rounds Lost: 0</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="round-stats">
+                <h4>ROUND STATS:</h4>
+                <div id="round-stats-cards">
+                    <div class="round-stats-card">
+                        <p>You:</p>
+                        <img id="player-played-class" src="./images/question-mark.png" alt="">
+                    </div>
+                    <div class="round-stats-card">
+                        <p>Winner:</p>
+                        <img id="round-winner" src="./images/winner-placeholder.png" alt="">
+                    </div>
+                    <div class="round-stats-card">
+                        <p>Opponent:</p>
+                        <img id="opponent-played-class" src="./images/question-mark.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div id="opponent-stats">
+                <div id="opponent-card">
+                    <div id="opponent-info">
+                        <div>
+                            <h4>Opponent</h4>
+                        </div>
+                        <div>
+                            <p id="opponent-rounds-won">Rounds Won: 0</p>
+                            <p id="opponent-rounds-lost">Rounds Lost: 0</p>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="./images/skull.png" alt="Opponent">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer id="footer">
+        <p>Made by Patrício Simões</p>
+        <p><a id="project-hub" href="../../index.html">&#8617; Back to the Portfolio</a></p>
+    </footer>
+</body>
+
+</html>
