@@ -6,7 +6,7 @@
 
 <h1>Project Preview:</h1>
 
-<img src="./assets/images/preview.png" alt="Project's preview">
+<img src="./preview.png" alt="Project's preview">
 
 <h1>Asset's Authors:</h1>
 
