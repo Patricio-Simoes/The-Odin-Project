@@ -3,9 +3,9 @@ const fullstackBtnElement = document.getElementById("fullstack-js");
 const foundationProjects = document.getElementById("foundations-projects");
 const fullstackProjects = document.getElementById("fullstack-projects");
 
-function toggleProjects(){
+function toggleProjects(opt){
     //? Displays foundations projects.
-    if(fullstackBtnElement.classList.contains("projects-btn-active")){
+    if(opt == "foundations"){
         fullstackBtnElement.classList.remove("projects-btn-active");
         foundationsBtnElement.classList.add("projects-btn-active");
         fullstackProjects.classList.add("hidden");
@@ -19,3 +19,6 @@ function toggleProjects(){
         foundationProjects.classList.add("hidden");
     }
 }
+
+//? The page loads 'The Foundations' projects by default.
+toggleProjects('foundations');
