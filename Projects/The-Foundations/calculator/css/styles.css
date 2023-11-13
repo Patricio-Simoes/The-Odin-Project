@@ -168,6 +168,10 @@ footer a {
     color: #2569bd;
 }
 
+footer a:hover {
+    color: #FFF;
+}
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     #calculator {
